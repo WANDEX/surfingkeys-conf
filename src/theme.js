@@ -243,4 +243,3 @@ input {
   font-weight: var(--font-weight);
 }
 `;
-
