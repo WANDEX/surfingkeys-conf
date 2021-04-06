@@ -1,10 +1,11 @@
 {
   "name": "surfingkeys-conf",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "generate surfingkeys config from node.js modular file organization",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint ./src/ ./gulpfile.js",
     "gulp": "gulp $@"
   },
   "repository": {
@@ -22,13 +23,26 @@
     "url": "https://github.com/WANDEX/surfingkeys-conf/issues"
   },
   "homepage": "https://github.com/WANDEX/surfingkeys-conf#readme",
+  "dependencies": {
+    "github-reserved-names": "^2.0.4"
+  },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
     "del": "^6.0.0",
+    "eslint": "7.16.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "express": "^4.17.1",
     "gulp": "^4.0.2",
-    "gulp-parcel": "^0.3.6",
+    "gulp-eslint": "^6.0.0",
+    "gulp-file": "^0.4.0",
+    "gulp-if": "^3.0.0",
+    "gulp-notify": "^3.2.0",
     "gulp-rename": "^2.0.0",
-    "platform-folders": "^0.5.2"
+    "gulp-replace": "^1.0.0",
+    "node-fetch": "^2.6.1",
+    "platform-folders": "^0.5.2",
+    "plugin-error": "^1.0.1",
+    "webpack": "^5.11.1",
+    "webpack-stream": "^6.1.1"
   }
 }
