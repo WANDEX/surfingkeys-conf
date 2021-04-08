@@ -859,6 +859,27 @@ maps["home.nest.com"] = [
   },
 ]
 
+maps["goodfon.ru"] = [
+  {
+    leader:      "",
+    alias:       "]]",
+    description: "Next page",
+    callback:    () => document.querySelector(".paginator__block__bg__next").click(),
+  },
+  {
+    leader:      "",
+    alias:       "[[",
+    description: "Prev page",
+    callback:    () => document.querySelector(".paginator__block__bg__prev").click(),
+  },
+  {
+    leader:      "",
+    alias:       "O",
+    description: "Open original size raw image",
+    callback:    actions.goodfon.openRawImage,
+  },
+]
+
 // Aliases
 const aliases = {
   "wikipedia.org": [
