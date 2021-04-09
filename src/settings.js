@@ -1,7 +1,16 @@
-settings.omnibarPosition = "bottom"
-settings.omnibarMaxResults = 14
+const util = require("./util")
 
-settings.smoothScroll = false
-settings.scrollStepSize = 70
+// ---- Settings ----//
+util.addSettings({
+  hintAlign:                "left",
+  omnibarMaxResults:        14,
+  omnibarPosition:          "bottom",
+  omnibarSuggestionTimeout: 500,
+  richHintsForKeystroke:    1,
+  scrollStepSize:           70,
+  smoothScroll:             false,
+})
 
-settings.hintAlign = "left"
+if (typeof Hints !== "undefined") {
+  Hints.characters = "qwfpgarstdzxcvb"
+}
