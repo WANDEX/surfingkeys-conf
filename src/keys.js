@@ -4,8 +4,9 @@ const { categories } = require("./help")
 // Remove undesired default mappings
 const unmaps = {
   mappings: [
-    "i", "gi",
+    "O", "i", "gi",
     ";e", ";s", ";pm",
+    "p", "<Alt-i>", // pass through
   ],
   searchAliases: {
     s: ["g", "d", "b",
