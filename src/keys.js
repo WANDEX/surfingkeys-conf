@@ -6,6 +6,7 @@ const unmaps = {
   mappings: [
     "O", "i", "gi",
     ";e", ";s", ";pm",
+    "yg", "yG", "yS", // screenshot/capture page
     "p", "<Alt-i>", // pass through
   ],
   searchAliases: {
