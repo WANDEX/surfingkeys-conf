@@ -31,6 +31,14 @@ settings.theme = `
   /* --yellow: #EBCB8B; */
 }
 
+/* Disable RichHints CSS animation */
+.expandRichHints {
+    animation: 0s ease-in-out 1 forwards expandRichHints;
+}
+.collapseRichHints {
+    animation: 0s ease-in-out 1 forwards collapseRichHints;
+}
+
 /* ---------- Generic ---------- */
 .sk_theme {
 background: var(--bg);
