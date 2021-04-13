@@ -14,3 +14,13 @@ util.addSettings({
 if (typeof Hints !== "undefined") {
   Hints.characters = "qwfpgarstdzxcvb"
 }
+
+// visual key remappings
+vmap("n", "j") // forward line
+vmap("e", "k") // backward line
+vmap("i", "l") // forward character
+
+// unmap old visual keys
+vunmap("j")
+vunmap("k")
+vunmap("l")
