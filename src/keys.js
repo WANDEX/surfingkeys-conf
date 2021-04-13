@@ -4,7 +4,7 @@ const { categories } = require("./help")
 // Remove undesired default mappings
 const unmaps = {
   mappings: [
-    "O", "i", "gi",
+    "O", "H", "i", "gi",
     ";e", ";s", ";pm",
     "yg", "yG", "yS", // screenshot/capture page
     "p", "<Alt-i>", // pass through
@@ -79,6 +79,36 @@ maps.global = [
     category:    categories.scroll,
     description: "Scroll to element targeted by URL hash",
     callback:    actions.scrollToHash,
+  },
+  {
+    alias:       "L",
+    map:         "E",
+    category:    categories.tabs,
+    description: "Go one tab left",
+  },
+  {
+    alias:       "H",
+    category:    categories.scroll,
+    description: "Scroll page left far",
+    callback:    () => { window.scrollBy(-500, 0) },
+  },
+  {
+    alias:       "N",
+    category:    categories.scroll,
+    description: "Scroll full page down",
+    callback:    () => { Normal.scroll("fullPageDown") },
+  },
+  {
+    alias:       "E",
+    category:    categories.scroll,
+    description: "Scroll full page up",
+    callback:    () => { Normal.scroll("fullPageUp") },
+  },
+  {
+    alias:       "I",
+    category:    categories.scroll,
+    description: "Scroll page right far",
+    callback:    () => { window.scrollBy(500, 0) },
   },
   {
     alias:       "gI",
@@ -189,7 +219,7 @@ maps.global = [
     callback:    actions.togglePdfViewer,
   },
   {
-    alias:       "gxE",
+    alias:       "gxL",
     map:         "gxt",
     category:    categories.tabs,
     description: "Close tab to left",
