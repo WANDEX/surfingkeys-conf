@@ -13,6 +13,8 @@ module.exports = {
     unmap:              false,
     map:                false,
     mapkey:             false,
+    aceVimMap:          false,
+    addVimMapKey:       false,
     settings:           false,
     removeSearchAliasX: false,
     addSearchAliasX:    false,
