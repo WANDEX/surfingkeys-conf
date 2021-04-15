@@ -1,3 +1,4 @@
+require("./acevim")
 require("./settings")
 require("./theme")
 const util = require("./util")
