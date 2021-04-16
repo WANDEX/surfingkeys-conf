@@ -3,6 +3,7 @@ require("./settings")
 require("./theme")
 const util = require("./util")
 const keys = require("./keys")
+const completions = require("./completions")
 
 // Leader for site-specific mappings
 const siteleader = "<Space>"
@@ -15,6 +16,6 @@ const searchleader = "A"
 util.rmMaps(keys.unmaps.mappings)
 util.rmSearchAliases(keys.unmaps.searchAliases)
 util.processMaps(keys.maps, keys.aliases, siteleader)
-// util.processCompletions(completions, searchleader)
+util.processCompletions(completions, searchleader)
 
 module.exports = { siteleader, searchleader }
