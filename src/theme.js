@@ -12,18 +12,21 @@ settings.theme = `
 /* Edit these variables for easy theme making */
 :root {
   /* Font */
-  --font: 'NotoSans Nerd Font', 'NotoEmoji Nerd Font', Ubuntu, sans;
-  --font-size: 14;
+  --font: 'NotoMono Nerd Font', 'NotoEmoji Nerd Font', Ubuntu, sans;
+  --font-size: 12;
   --font-weight: normal;
 
   --fg: #E5E9F0;
   --bg: #3B4252;
+  --bg-num: #3B425299;
+  --bg-ace: #2E344099;
   --bg-dark: #2E3440;
   --border: #4C566A;
   --main-fg: #88C0D0;
   --accent-fg: #A3BE8C;
   --info-fg: #5E81AC;
   --select: #4C566A;
+  --block: #4C566A99;
 
   /* Unused Alternate Colors */
   /* --orange: #D08770; */
@@ -204,43 +207,41 @@ input {
 
 /* ---------- ACE Editor ---------- */
 #sk_editor {
-  background: var(--bg-dark) !important;
-  height: 50% !important;
-  /* Remove this to restore the default editor size */
+  background: var(--bg-ace) !important; // main bg color
+  height: 20% !important; // Remove this to restore the default editor size
 }
 
 .ace_dialog-bottom {
-  border-top: 1px solid var(--bg) !important;
+  border-top: 1px solid var(--bg) !important; // Y/n prompt & [] color
 }
 
 .ace-chrome .ace_print-margin,
 .ace_gutter,
 .ace_gutter-cell,
 .ace_dialog {
-  background: var(--bg) !important;
+  background: var(--bg-num) !important; // background color of line numbers
 }
 
 .ace-chrome {
-  color: var(--fg) !important;
+  color: var(--fg) !important; // font color
 }
 
 .ace_gutter,
 .ace_dialog {
-  color: var(--fg) !important;
+  color: var(--fg) !important; // line numbers color
 }
 
 .ace_cursor {
-  color: var(--fg) !important;
+  color: var(--fg) !important; // | <- insert cursor color
 }
 
 .normal-mode .ace_cursor {
-  background-color: var(--fg) !important;
-  border: var(--fg) !important;
-  opacity: 0.7 !important;
+  background-color: var(--block) !important; // [] <- normal cursor color
+  border: var(--block) !important; // does nothing?
 }
 
 .ace_marker-layer .ace_selection {
-  background: var(--select) !important;
+  background: var(--select) !important; // visual selection color
 }
 
 .ace_editor,
