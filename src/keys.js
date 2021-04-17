@@ -912,6 +912,45 @@ maps["goodfon.ru"] = [
   },
 ]
 
+maps["typingclub.com"] = [
+  {
+    leader:      "",
+    alias:       "<Alt-f>",
+    description: "Click root of the lesson window to be able to type",
+    callback:    () => document.querySelector("div#root").click(),
+  },
+  {
+    leader:      "",
+    alias:       "<Alt-m>",
+    description: "Menu button click",
+    callback:    () => document.querySelector("div.menu-btn").click(),
+  },
+  {
+    leader:      "",
+    alias:       "<Alt-t>",
+    description: "Try again lesson",
+    callback:    () => document.querySelector("button.btn.navbar-goback.hoverable-button.primary").click(),
+  },
+  {
+    leader:      "",
+    alias:       "<Alt-p>",
+    description: "Pause lesson",
+    callback:    () => document.querySelector(".edicon-play").click(),
+  },
+  {
+    leader:      "",
+    alias:       "<Alt-r>",
+    description: "restart / refresh lesson",
+    // callback:    () => document.querySelector(".edicon-refresh").click(),
+    callback:    () => {
+      // if press Esc and press very fast <Alt-r> it will work!
+      // without Esc keyboard input is grabbed and shortcut could not be used.
+      alert("pressed")
+      document.querySelector(".edicon-refresh").click()
+    },
+  },
+]
+
 // Aliases
 const aliases = {
   "wikipedia.org": [
