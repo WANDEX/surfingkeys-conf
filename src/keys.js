@@ -10,7 +10,7 @@ const unmaps = {
     "p", "<Alt-i>", // pass through
   ],
   searchAliases: {
-    s: ["g", "d", "b",
+    s: ["e", "y", "g", "d", "b",
       "w", "s", "h"],
   },
 }
@@ -375,7 +375,7 @@ maps["youtube.com"] = [
   },
   {
     leader:      "",
-    alias:       "F",
+    alias:       "gF",
     description: "Toggle fullscreen",
     callback:    () => document.querySelector(".ytp-fullscreen-button.ytp-button").click(),
   },
