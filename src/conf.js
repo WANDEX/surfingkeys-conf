@@ -9,7 +9,7 @@ const completions = require("./completions")
 const siteleader = "<Space>"
 
 // Leader for OmniBar searchEngines
-const searchleader = "A"
+const searchleader = "s"
 
 // Process mappings and completions
 // See ./keys.js and ./completions.js
