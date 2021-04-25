@@ -5,7 +5,7 @@ const { categories } = require("./help")
 const unmaps = {
   mappings: [
     "O", "H", "i", "gi",
-    ";e", ";s", ";pm",
+    ";e", ";s", ";pm", ";t",
     "yg", "yG", "yS", // screenshot/capture page
     "p", "<Alt-i>", // pass through
   ],
@@ -217,6 +217,12 @@ maps.global = [
     category:    categories.misc,
     description: "Toggle PDF viewer from SurfingKeys",
     callback:    actions.togglePdfViewer,
+  },
+  {
+    alias:       ";t",
+    category:    categories.misc,
+    description: "Translate current page with google",
+    callback:    actions.openLink(`https://translate.google.com/translate?js=n&sl=auto&tl=ru&u=${window.location.href}`, { newTab: true }),
   },
   {
     alias:       "gxL",
