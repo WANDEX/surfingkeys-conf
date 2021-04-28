@@ -16,3 +16,4 @@ if (typeof Hints !== "undefined") {
 }
 
 
+iunmap(":") // disable Emoji completion
