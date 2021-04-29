@@ -17,5 +17,5 @@ vmapkey("gt", "Translate selected text with google", () => {
 })
 
 // scroll page visual mappings
-vmapkey("<Alt-n>", "Scroll page down", () => { Normal.scroll("down") })
-vmapkey("<Alt-e>", "Scroll page up", () => { Normal.scroll("up") })
+vmapkey("j", "Scroll page down", () => { Normal.scroll("down") })
+vmapkey("k", "Scroll page up", () => { Normal.scroll("up") })
