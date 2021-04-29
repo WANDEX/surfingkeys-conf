@@ -15,3 +15,7 @@ vunmap("t")
 vmapkey("gt", "Translate selected text with google", () => {
   searchSelectedWith("https://translate.google.com/?hl=en&sl=auto&tl=ru&op=translate&text=", false, false, "")
 })
+
+// scroll page visual mappings
+vmapkey("<Alt-n>", "Scroll page down", () => { Normal.scroll("down") })
+vmapkey("<Alt-e>", "Scroll page up", () => { Normal.scroll("up") })
