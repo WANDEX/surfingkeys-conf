@@ -9,6 +9,7 @@ module.exports = {
     chrome:             false,
     tabOpenLink:        false,
     Hints:              false,
+    Normal:             false,
     Visual:             false,
     unmap:              false,
     vmap:               false,
@@ -23,6 +24,7 @@ module.exports = {
     removeSearchAliasX: false,
     addSearchAliasX:    false,
     completions:        false,
+    unmapAllExcept:     false,
   },
   env: {
     browser: true,
