@@ -242,6 +242,19 @@ maps.global = [
     description: "Open clipboard string as GitHub path (e.g. 'torvalds/linux')",
     callback:    actions.gh.openRepoFromClipboard,
   },
+  {
+    alias:       "<Space>",
+    category:    categories.misc,
+    description: "Play/pause or other Default action on pre defined element",
+    callback:    () => {
+      const doTry = (s) => {
+        if (document.querySelector(s) != null) {
+          document.querySelector(s).click()
+        }
+      }
+      doTry("div.fluid_controls_left > *") // fluidplayer play/pause
+    },
+  },
 ]
 
 maps["amazon.com"] = [
