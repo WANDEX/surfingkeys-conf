@@ -2,13 +2,20 @@ const util = require("./util")
 
 // ---- Settings ----//
 util.addSettings({
+  defaultSearchEngine:      "dd",
+  focusFirstCandidate:      true,
   hintAlign:                "left",
   omnibarMaxResults:        14,
   omnibarPosition:          "bottom",
-  omnibarSuggestionTimeout: 500,
-  richHintsForKeystroke:    1,
+  omnibarSuggestionTimeout: 1500,
+  richHintsForKeystroke:    300,
+  prevLinkRegex:            /((?<!.)<(?!.))|(.*prev(ious)?.*)/i,
+  nextLinkRegex:            /((?<!.)>(?!.))|(.*next.*)/i,
   scrollStepSize:           70,
   smoothScroll:             false,
+  tabsMRUOrder:             false,
+  historyMUOrder:           false,
+  tabsThreshold:            0,
 })
 
 if (typeof Hints !== "undefined") {
