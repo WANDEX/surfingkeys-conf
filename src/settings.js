@@ -19,7 +19,7 @@ util.addSettings({
 })
 
 if (typeof Hints !== "undefined") {
-  Hints.characters = "qwfpgarstdzxcvb"
+  Hints.characters = "qwfpgarstdzxcvbneioluyh" // both hands
 }
 
 
