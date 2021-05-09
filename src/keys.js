@@ -4,6 +4,7 @@ const { categories } = require("./help")
 // Remove undesired default mappings
 const unmaps = {
   mappings: [
+    "af",
     "O", "H", "i", "gi",
     ";e", ";s", ";pm", ";t",
     "yg", "yG", "yS", // screenshot/capture page
@@ -223,6 +224,12 @@ maps.global = [
     category:    categories.misc,
     description: "Translate current page with google",
     callback:    actions.openLink(`https://translate.google.com/translate?js=n&sl=auto&tl=ru&u=${window.location.href}`, { newTab: true }),
+  },
+  {
+    alias:       ";ab",
+    map:         "ab",
+    category:    categories.misc,
+    description: "Bookmark current page to selected folder",
   },
   {
     alias:       "gxL",

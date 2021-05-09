@@ -21,5 +21,6 @@ util.rmMaps(keys.unmaps.mappings)
 util.rmSearchAliases(keys.unmaps.searchAliases)
 util.processMaps(keys.maps, keys.aliases, siteleader)
 util.processCompletions(completions, searchleader)
+require("./nmap") // !!! should be only after keys.js [un]mappings
 
 module.exports = { siteleader, searchleader }
