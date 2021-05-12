@@ -10,7 +10,7 @@ const completions = require("./completions")
 
 // Leader for site-specific mappings
 //const siteleader = "<Space>"
-const siteleader = "A"
+const siteleader = "a"
 
 // Leader for OmniBar searchEngines
 const searchleader = "s"
