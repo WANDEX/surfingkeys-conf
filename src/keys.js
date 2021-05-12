@@ -405,6 +405,26 @@ maps["youtube.com"] = [
     description: "Toggle fullscreen",
     callback:    () => document.querySelector(".ytp-fullscreen-button.ytp-button").click(),
   },
+  {
+    // FIXME why it works on all youtube pages? While it should work only on 'path'
+    path:        "/playlist.*",
+    leader:      "",
+    alias:       "D",
+    description: "Delete/Remove from playlist/watch later video",
+    callback:    actions.createHints("*[id='video-title']", async (o) => {
+      const parent = o.closest("[class='style-scope ytd-playlist-video-list-renderer']")
+      parent.querySelector("[id='interaction']").click() // click vertical(...)  button
+      await new Promise((r) => setTimeout(r, 100)) // sleep ms
+      const HREF = window.location.href
+      if (HREF.match(/.*list=WL/)) {
+        // remove from watch later
+        document.querySelector("#items > ytd-menu-service-item-renderer:nth-child(3)").click()
+      } else {
+        // remove from playlist
+        document.querySelector("#items > ytd-menu-service-item-renderer:nth-child(4)").click()
+      }
+    })
+  },
 ]
 
 maps["vimeo.com"] = [
