@@ -259,7 +259,7 @@ maps.global = [
     callback:    actions.gh.openRepoFromClipboard,
   },
   {
-    alias:       "<Space>",
+    alias:       "p",
     category:    categories.misc,
     description: "Play/pause or other Default action on pre defined element",
     callback:    () => {
