@@ -155,6 +155,15 @@ maps.global = [
     callback:    actions.copyMarkdownLink,
   },
   {
+    alias:       "yr",
+    category:    categories.clipboard,
+    description: "Copy page domain URL as regex",
+    callback:    () => {
+      const regex = `domain: /${window.location.href.slice(8).split("/")[0].replace(/\./g, "\\.")}/i`
+      Clipboard.write(regex)
+    },
+  },
+  {
     alias:       ";se",
     category:    categories.settings,
     description: "Edit Settings",
