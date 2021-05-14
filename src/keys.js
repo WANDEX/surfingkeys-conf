@@ -967,6 +967,47 @@ maps["goodfon.ru"] = [
   },
 ]
 
+maps["soundcloud.com"] = [
+  {
+    leader:      "",
+    alias:       "]]",
+    description: "Next song",
+    callback:    () => document.querySelector(".playControls__next").click(),
+  },
+  {
+    leader:      "",
+    alias:       "[[",
+    description: "Prev song",
+    callback:    () => document.querySelector(".playControls__prev").click(),
+  },
+  {
+    leader:      "",
+    alias:       "p",
+    description: "Play/Pause song",
+    callback:    () => document.querySelector(".playControls__play").click(),
+  },
+  {
+    alias:       "l",
+    description: "Like/Unlike playing song",
+    callback:    () => document.querySelector(".playbackSoundBadge__actions > .sc-button-like").click(),
+  },
+  {
+    alias:       "q",
+    description: "Show Queue",
+    callback:    () => document.querySelector(".playbackSoundBadge__showQueue").click(),
+  },
+  {
+    alias:       "r",
+    description: "Repeat",
+    callback:    () => document.querySelector(".repeatControl").click(),
+  },
+  {
+    alias:       "s",
+    description: "Shuffle",
+    callback:    () => document.querySelector(".shuffleControl").click(),
+  },
+]
+
 maps["typingclub.com"] = [
   {
     leader:      "",
