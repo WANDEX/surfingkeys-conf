@@ -1,5 +1,13 @@
 // Visual mode mappings
 
+// omnibar uses cmap & vmapkey!
+// here we inverse direction because of omnibarPosition=bottom
+// Forward/Backward cycle through the candidates.
+cmap("<ArrowDown>", "<Shift-Tab>")
+cmap("<ArrowUp>", "<Tab>")
+cmap("<Alt-n>", "<Shift-Tab>")
+cmap("<Alt-e>", "<Tab>")
+
 // visual key remappings
 vmap("n", "j") // forward line
 vmap("e", "k") // backward line

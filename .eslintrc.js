@@ -14,6 +14,7 @@ module.exports = {
     Visual:             false,
     iunmap:             false,
     unmap:              false,
+    cmap:               false,
     vmap:               false,
     vunmap:             false,
     map:                false,
