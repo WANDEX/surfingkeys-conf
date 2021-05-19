@@ -434,6 +434,21 @@ maps["youtube.com"] = [
       }
     })
   },
+  {
+    path:        "/playlist.*",
+    alias:       "pu",
+    description: "playlist urls - get all video urls of current playlist",
+    callback:    () => {
+      // don't forget to scroll to the end of the playlist -> to get (indexes > 100)
+      const titleNodes = document.querySelectorAll("#video-title")
+      const hrefs = []
+      for (let i = 0; i < titleNodes.length; i += 1) {
+        hrefs.push(titleNodes[i].href)
+      }
+      const urls = hrefs.join("\n") // each on it's own line
+      Clipboard.write(urls)
+    },
+  },
 ]
 
 maps["vimeo.com"] = [
