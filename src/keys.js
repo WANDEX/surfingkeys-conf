@@ -435,6 +435,24 @@ maps["youtube.com"] = [
     })
   },
   {
+    alias:       "w",
+    description: "add to watch later",
+    callback:    async () => {
+      const HREF = window.location.href
+      if (HREF.match(/.*watch\?v=/)) {
+        // if we at page with video
+        // click save to playlist (menu with check boxes)
+        document.querySelector("#top-level-buttons > ytd-button-renderer:nth-child(4)").click()
+        await new Promise((r) => setTimeout(r, 300)) // sleep ms
+        // click add to watch later
+        document.querySelector(".checkbox-height.style-scope.ytd-playlist-add-to-option-renderer").click()
+        // close menu box
+        await new Promise((r) => setTimeout(r, 200)) // sleep ms
+        document.querySelector("[icon=close]").click()
+      }
+    }
+  },
+  {
     path:        "/playlist.*",
     alias:       "pu",
     description: "playlist urls - get all video urls of current playlist",
