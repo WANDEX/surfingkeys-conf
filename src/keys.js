@@ -435,8 +435,8 @@ maps["youtube.com"] = [
     })
   },
   {
-    alias:       "w",
-    description: "add to watch later",
+    alias:       "W",
+    description: "add to watch later currently opened video",
     callback:    async () => {
       const HREF = window.location.href
       if (HREF.match(/.*watch\?v=/)) {
@@ -446,11 +446,22 @@ maps["youtube.com"] = [
         await new Promise((r) => setTimeout(r, 300)) // sleep ms
         // click add to watch later
         document.querySelector(".checkbox-height.style-scope.ytd-playlist-add-to-option-renderer").click()
-        // close menu box
         await new Promise((r) => setTimeout(r, 200)) // sleep ms
+        // close menu box
         document.querySelector("[icon=close]").click()
       }
     }
+  },
+  {
+    alias:       "w",
+    description: "add to watch later video selected with hint",
+    callback:    actions.createHints("*[id='video-title']", async (o) => {
+      const parent = o.parentElement.parentElement.parentElement.parentElement
+      // click vertical(...)  button -> add to watch later
+      parent.querySelector("[aria-label='Action menu']").click()
+      await new Promise((r) => setTimeout(r, 300)) // sleep ms
+      document.querySelector("#items > ytd-menu-service-item-renderer:nth-child(2)").click()
+    })
   },
   {
     path:        "/playlist.*",
