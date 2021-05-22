@@ -435,6 +435,18 @@ maps["youtube.com"] = [
     })
   },
   {
+    alias:       "h",
+    description: "remove from watch history video selected with hint",
+    callback:    actions.createHints("*[id='video-title']", (o) => {
+      const HREF = window.location.href
+      if (HREF.match(/.*\/feed\/history/)) {
+        // if we at /feed/history page
+        const parent = o.parentElement.parentElement
+        parent.querySelector("[aria-label='Remove from Watch history']").click()
+      }
+    })
+  },
+  {
     alias:       "W",
     description: "add to watch later currently opened video",
     callback:    async () => {
