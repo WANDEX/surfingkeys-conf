@@ -259,6 +259,12 @@ maps.global = [
     callback:    actions.gh.openRepoFromClipboard,
   },
   {
+    alias:       "P",
+    map:         "cc",
+    category:    categories.clipboard,
+    description: "Open selected link or link from clipboard",
+  },
+  {
     alias:       "p",
     category:    categories.misc,
     description: "Play/pause or other Default action on pre defined element",
