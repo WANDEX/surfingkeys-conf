@@ -23,4 +23,10 @@ if (typeof Hints !== "undefined") {
   Hints.characters = "qwfpgarstdzxcvbneioluyh" // both hands
 }
 
+const HREF = window.location.href
+
+if (HREF.match(/typingclub\.com.*\.play/)) {
+  settings.stealFocusOnLoad = false
+  settings.editableBodyCare = false
+}
 
