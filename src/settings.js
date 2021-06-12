@@ -25,7 +25,7 @@ if (typeof Hints !== "undefined") {
 
 const HREF = window.location.href
 
-if (HREF.match(/typingclub\.com.*\.play/)) {
+if (HREF.match(/typingclub\.com/)) {
   settings.stealFocusOnLoad = false
   settings.editableBodyCare = false
 }
