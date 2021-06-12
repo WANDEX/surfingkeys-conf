@@ -5,6 +5,7 @@ util.addSettings({
   defaultSearchEngine:      "dd",
   focusFirstCandidate:      true,
   hintAlign:                "left",
+  modeAfterYank:            "Normal",
   omnibarMaxResults:        14,
   omnibarPosition:          "bottom",
   omnibarSuggestionTimeout: 1500,
