@@ -1079,13 +1079,31 @@ maps["typingclub.com"] = [
   },
   {
     leader:      "",
+    alias:       "<Alt-Enter>",
+    description: "Open lesson",
+    callback:    actions.createHints(".lsn_name"),
+  },
+  {
+    leader:      "",
     alias:       "<Alt-m>",
     description: "Menu button click",
     callback:    () => document.querySelector("div.menu-btn").click(),
   },
   {
     leader:      "",
+    alias:       "<Alt-Backspace>",
+    description: "Menu button click",
+    callback:    () => document.querySelector("div.menu-btn").click(),
+  },
+  {
+    leader:      "",
     alias:       "<Alt-t>",
+    description: "Try again lesson",
+    callback:    () => document.querySelector("button.btn.navbar-goback.hoverable-button.primary").click(),
+  },
+  {
+    leader:      "",
+    alias:       "<Alt-Space>",
     description: "Try again lesson",
     callback:    () => document.querySelector("button.btn.navbar-goback.hoverable-button.primary").click(),
   },
