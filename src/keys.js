@@ -1029,6 +1029,30 @@ maps["goodfon.ru"] = [
   },
 ]
 
+maps["rutracker.org"] = [
+  {
+    leader:      "",
+    alias:       "D",
+    description: "Download torrent file",
+    callback:    () => document.querySelector(".dl-stub.dl-link.dl-topic").click(),
+  },
+  {
+    leader:      "",
+    alias:       "M",
+    description: "Copy Magnet link",
+    callback:    () => {
+      const magnet = document.querySelector(".med.magnet-link").href
+      Clipboard.write(magnet)
+    },
+  },
+  {
+    leader:      "",
+    alias:       "S",
+    description: "Show list of files",
+    callback:    () => document.querySelector("#tor-filelist-btn").click(),
+  },
+]
+
 maps["soundcloud.com"] = [
   {
     leader:      "",
