@@ -460,7 +460,7 @@ maps["youtube.com"] = [
       if (HREF.match(/.*watch\?v=/)) {
         // if we at page with video
         // click save to playlist (menu with check boxes)
-        document.querySelector("#top-level-buttons > ytd-button-renderer:nth-child(4)").click()
+        document.querySelector("[aria-label='Save to playlist']").click()
         await new Promise((r) => setTimeout(r, 300)) // sleep ms
         // click add to watch later
         document.querySelector(".checkbox-height.style-scope.ytd-playlist-add-to-option-renderer").click()
