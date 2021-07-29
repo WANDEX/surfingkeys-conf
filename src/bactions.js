@@ -39,12 +39,12 @@ bactions.yankQueCleanURL = actions.createHints("a[href]", (a) =>
 // open clean URL
 // ===========================
 bactions.openAllCleanURL = actions.createHints("a[href]", (a) =>
-  actions.openLink(bactions.cleanStringAll(a.href), { newTab: true })())
+  actions.openLink(bactions.cleanStringAll(a.href), { newTab: true, active: false })())
 
 bactions.openAmpCleanURL = actions.createHints("a[href]", (a) =>
-  actions.openLink(bactions.cutStringAfter(a.href, "&"), { newTab: true })())
+  actions.openLink(bactions.cutStringAfter(a.href, "&"), { newTab: true, active: false })())
 
 bactions.openQueCleanURL = actions.createHints("a[href]", (a) =>
-  actions.openLink(bactions.cutStringAfter(a.href, "?"), { newTab: true })())
+  actions.openLink(bactions.cutStringAfter(a.href, "?"), { newTab: true, active: false })())
 
 module.exports = bactions
