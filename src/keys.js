@@ -1,4 +1,5 @@
 const actions = require("./actions")
+const bactions = require("./bactions")
 const { categories } = require("./help")
 
 // Remove undesired default mappings
@@ -162,6 +163,30 @@ maps.global = [
       const regex = `domain: /${window.location.href.slice(8).split("/")[0].replace(/\./g, "\\.")}/i`
       Clipboard.write(regex)
     },
+  },
+  {
+    alias:       "yA",
+    category:    categories.clipboard,
+    description: "Copy a link URL to the clipboard (cutting after &?)",
+    callback:    bactions.yankAllCleanURL,
+  },
+  {
+    alias:       "y?",
+    category:    categories.clipboard,
+    description: "Copy a link URL to the clipboard (cutting after ?)",
+    callback:    bactions.yankQueCleanURL,
+  },
+  {
+    alias:       "y&",
+    category:    categories.clipboard,
+    description: "Copy a link URL to the clipboard (cutting after &)",
+    callback:    bactions.yankAmpCleanURL,
+  },
+  {
+    alias:       "YY",
+    category:    categories.clipboard,
+    description: "Copy current page's URL (cutting after &?)",
+    callback:    bactions.copyCleanCurrentURL,
   },
   {
     alias:       ";se",
