@@ -35,6 +35,24 @@ maps.global = [
     callback:    actions.previewLink,
   },
   {
+    alias:       "ca",
+    category:    categories.mouseClick,
+    description: "Open fully clean link (cutting after &?)",
+    callback:    bactions.openAllCleanURL,
+  },
+  {
+    alias:       "c?",
+    category:    categories.mouseClick,
+    description: "Open clean link (cutting after ?)",
+    callback:    bactions.openQueCleanURL,
+  },
+  {
+    alias:       "c&",
+    category:    categories.mouseClick,
+    description: "Open clean link (cutting after &)",
+    callback:    bactions.openAmpCleanURL,
+  },
+  {
     alias:       "<Alt-n>",
     map:         "n",
     category:    categories.visualMode,

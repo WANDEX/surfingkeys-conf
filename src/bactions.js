@@ -25,6 +25,8 @@ bactions.cleanStringAll = (string) => {
   return str
 }
 
+// yank clean URL
+// ===========================
 bactions.yankAllCleanURL = actions.createHints("a[href]", (a) =>
   Clipboard.write(bactions.cleanStringAll(a.href)))
 
@@ -33,5 +35,16 @@ bactions.yankAmpCleanURL = actions.createHints("a[href]", (a) =>
 
 bactions.yankQueCleanURL = actions.createHints("a[href]", (a) =>
   Clipboard.write(bactions.cutStringAfter(a.href, "?")))
+
+// open clean URL
+// ===========================
+bactions.openAllCleanURL = actions.createHints("a[href]", (a) =>
+  actions.openLink(bactions.cleanStringAll(a.href), { newTab: true })())
+
+bactions.openAmpCleanURL = actions.createHints("a[href]", (a) =>
+  actions.openLink(bactions.cutStringAfter(a.href, "&"), { newTab: true })())
+
+bactions.openQueCleanURL = actions.createHints("a[href]", (a) =>
+  actions.openLink(bactions.cutStringAfter(a.href, "?"), { newTab: true })())
 
 module.exports = bactions
