@@ -496,6 +496,13 @@ maps["youtube.com"] = [
     })
   },
   {
+    leader:      "",
+    alias:       "O",
+    description: "copy clean video url (cutting after &)",
+    callback:    actions.createHints("*[id='video-title']", (o) =>
+      Clipboard.write(bactions.cutStringAfter(o.href, "&")))
+  },
+  {
     alias:       "W",
     description: "add to watch later currently opened video",
     callback:    async () => {
