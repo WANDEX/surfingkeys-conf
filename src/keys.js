@@ -1173,7 +1173,7 @@ maps["typingclub.com"] = [
     leader:      "",
     alias:       "<Alt-t>",
     description: "Try again lesson",
-    callback:    () => document.querySelector("button.btn.navbar-goback.hoverable-button.primary").click(),
+    callback:    () => document.querySelector("[aria-label='Try again']").click(),
   },
   {
     leader:      "",
