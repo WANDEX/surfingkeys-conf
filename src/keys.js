@@ -318,6 +318,7 @@ maps.global = [
         }
       }
       doTry("div.fluid_controls_left > *") // fluidplayer play/pause
+      doTry("#hlsplayer > * > [title*=Play]")
     },
   },
 ]
