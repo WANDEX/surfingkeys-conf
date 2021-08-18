@@ -439,6 +439,11 @@ maps["yelp.com"] = [
 ]
 
 maps["youtube.com"] = [
+  // callback:    actions.createHints("*[id='video-title']", async (url) => {
+  // MEMO: F12 -> hover over dynamic element -> ctrl+shift+p -> disable javascript.
+  // then we can inspect dynamic element that hides when not in mouseover etc.
+  // XXX but this just opened wideo not clicked desired button!
+  // document.querySelector("#hover-overlays [aria-label='Watch later']").click()
   {
     leader:      "",
     alias:       "A",
