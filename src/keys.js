@@ -1005,6 +1005,32 @@ maps["aur.archlinux.org"] = [
   },
 ]
 
+maps["hh.ru"] = [
+  {
+    alias:       "s",
+    description: "Star toggle favorite",
+    callback:    () => document.querySelector("[data-qa^='vacancy-body-mark-favorite_']").click(),
+  },
+  {
+    alias:       "i",
+    description: "Ignore this vacancy",
+    callback:    async () => {
+      document.querySelector("[data-qa^='vacancy__blacklist-show-']").click()
+      await new Promise((r) => setTimeout(r, 100)) // sleep ms
+      document.querySelector("[data-qa='vacancy__blacklist-menu-add-vacancy']").click()
+    },
+  },
+  {
+    alias:       "I",
+    description: "Ignore this employer",
+    callback:    async () => {
+      document.querySelector("[data-qa^='vacancy__blacklist-show-']").click()
+      await new Promise((r) => setTimeout(r, 100)) // sleep ms
+      document.querySelector("[data-qa='vacancy__blacklist-menu-add-employer']").click()
+    },
+  },
+]
+
 maps["home.nest.com"] = [
   {
     path:        "/thermostat/DEVICE_.*",
