@@ -481,7 +481,7 @@ maps["youtube.com"] = [
         // remove from playlist
         document.querySelector("#items > ytd-menu-service-item-renderer:nth-child(4)").click()
       }
-    })
+    }),
   },
   {
     alias:       "h",
@@ -493,14 +493,14 @@ maps["youtube.com"] = [
         const parent = o.parentElement.parentElement
         parent.querySelector("[aria-label='Remove from Watch history']").click()
       }
-    })
+    }),
   },
   {
     leader:      "",
     alias:       "O",
     description: "copy clean video url (cutting after &)",
     callback:    actions.createHints("*[id='video-title']", (o) =>
-      Clipboard.write(bactions.cutStringAfter(o.href, "&")))
+      Clipboard.write(bactions.cutStringAfter(o.href, "&"))),
   },
   {
     alias:       "W",
@@ -518,7 +518,7 @@ maps["youtube.com"] = [
         // close menu box
         document.querySelector("[icon=close]").click()
       }
-    }
+    },
   },
   {
     alias:       "w",
@@ -529,7 +529,7 @@ maps["youtube.com"] = [
       parent.querySelector("[aria-label='Action menu']").click()
       await new Promise((r) => setTimeout(r, 300)) // sleep ms
       document.querySelector("#items > ytd-menu-service-item-renderer:nth-child(2)").click()
-    })
+    }),
   },
   {
     path:        "/playlist.*",
