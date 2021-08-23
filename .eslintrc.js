@@ -15,6 +15,7 @@ module.exports = {
     iunmap:             false,
     unmap:              false,
     cmap:               false,
+    imap:               false,
     vmap:               false,
     vunmap:             false,
     map:                false,

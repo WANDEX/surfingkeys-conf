@@ -1,5 +1,11 @@
 // Visual mode mappings
 
+// Exit key for all modes
+map("<Ctrl-l>", "<Esc>")
+cmap("<Ctrl-l>", "<Esc>")
+imap("<Ctrl-l>", "<Esc>")
+vmap("<Ctrl-l>", "<Esc>")
+
 // omnibar uses cmap & vmapkey!
 // here we inverse direction because of omnibarPosition=bottom
 // Forward/Backward cycle through the candidates.
