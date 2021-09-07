@@ -8,6 +8,7 @@ unmap("ab") // add bookmark -> ;ab
 
 unmap("gxt") // Close tab on left  -> gxL
 unmap("gxT") // Close tab on right -> gxR
+unmap("gxx") // Close all tabs except current one -> gxX
 
 unmap("gf") // Open a link in non-active new tab -> F
 

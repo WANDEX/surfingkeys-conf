@@ -296,6 +296,12 @@ maps.global = [
     description: "Close tab to right",
   },
   {
+    alias:       "gxX",
+    map:         "gxx",
+    category:    categories.tabs,
+    description: "Close all tabs except current one",
+  },
+  {
     alias:       "\\cgh",
     category:    categories.clipboard,
     description: "Open clipboard string as GitHub path (e.g. 'torvalds/linux')",
