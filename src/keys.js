@@ -508,6 +508,12 @@ maps["youtube.com"] = [
     }),
   },
   {
+    path:        ".*/watch.*", // FIXME
+    alias:       "l",
+    description: "like button toggle",
+    callback:    () => document.querySelector("[aria-label^='like this video']").click(),
+  },
+  {
     leader:      "",
     alias:       "O",
     description: "copy clean video url (cutting after &)",
