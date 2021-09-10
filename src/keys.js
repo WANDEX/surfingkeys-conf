@@ -323,8 +323,22 @@ maps.global = [
           document.querySelector(s).click()
         }
       }
+      // control weird video player that is playable in markdown.md files
+      // (github, ...), but controls with play()/pause() instead of click()
+      const doMarkdownTry = (s) => {
+        if (document.querySelector(s) != null) {
+          if (document.querySelector(s).paused) {
+            document.querySelector(s).webkitRequestFullscreen()
+            document.querySelector(s).play()
+          } else {
+            document.querySelector(s).pause()
+            document.querySelector(s).webkitExitFullScreen()
+          }
+        }
+      }
       doTry("div.fluid_controls_left > *") // fluidplayer play/pause
       doTry("#hlsplayer > * > [title*=Play]")
+      doMarkdownTry("[controls='controls']")
     },
   },
 ]
