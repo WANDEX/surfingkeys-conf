@@ -338,6 +338,7 @@ maps.global = [
       }
       doTry("div.fluid_controls_left > *") // fluidplayer play/pause
       doTry("#hlsplayer > * > [title*=Play]")
+      doTry(".playback-button") // asciinema.org
       doMarkdownTry("[controls='controls']")
     },
   },
