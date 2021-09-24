@@ -351,6 +351,7 @@ maps.global = [
       doTry("div.fluid_controls_left > *") // fluidplayer play/pause
       doTry("#hlsplayer > * > [title*=Play]")
       doTry(".playback-button") // asciinema.org
+      doTry(".ng-video-controls > [data-action='play']") // newgrounds.com
       doMarkdownTry("[controls='controls']")
     },
   },
