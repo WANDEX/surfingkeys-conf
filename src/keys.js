@@ -336,6 +336,18 @@ maps.global = [
           }
         }
       }
+      // for video players which has separate buttons for play/pause
+      // accepts querySelector strings as arguments
+      // TODO, FIXME, unfinished & untested!
+      const doPlayPauseTry = (main_selector, state_selector, play_selector, pause_selector) => {
+        if (document.querySelector(main_selector) != null) {
+          if (document.querySelector(state_selector).paused) {
+            document.querySelector(play_selector).click()
+          } else {
+            document.querySelector(pause_selector).click()
+          }
+        }
+      }
       doTry("div.fluid_controls_left > *") // fluidplayer play/pause
       doTry("#hlsplayer > * > [title*=Play]")
       doTry(".playback-button") // asciinema.org
