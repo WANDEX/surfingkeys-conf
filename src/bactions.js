@@ -66,4 +66,16 @@ bactions.goodfon.openRawImage = async () => {
   actions.openLink(raw)()
 }
 
+// newgrounds
+bactions.newgrounds = {}
+bactions.newgrounds.openRawVideo = () => {
+  const url = document.querySelector("#ng-global-video-player > div > video > source").src
+  if (!url || url === null) {
+    return
+  }
+  const cleanurl = bactions.cutStringAfter(url, "?")
+  actions.openLink(cleanurl, { newTab: true, active: true })()
+}
+
+
 module.exports = bactions

@@ -1151,6 +1151,15 @@ maps["goodfon.ru"] = [
   },
 ]
 
+maps["newgrounds.com"] = [
+  {
+    leader:      "",
+    alias:       "O",
+    description: "Open raw video from current page in a new tab",
+    callback:    bactions.newgrounds.openRawVideo,
+  },
+]
+
 maps["rutracker.org"] = [
   {
     leader:      "",
