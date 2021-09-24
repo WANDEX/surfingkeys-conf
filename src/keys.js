@@ -1134,7 +1134,7 @@ maps["goodfon.ru"] = [
     leader:      "",
     alias:       "O",
     description: "Open original size raw image",
-    callback:    actions.goodfon.openRawImage,
+    callback:    bactions.goodfon.openRawImage,
   },
 ]
 

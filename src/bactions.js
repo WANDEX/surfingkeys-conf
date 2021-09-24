@@ -47,4 +47,23 @@ bactions.openAmpCleanURL = actions.createHints("a[href]", (a) =>
 bactions.openQueCleanURL = actions.createHints("a[href]", (a) =>
   actions.openLink(bactions.cutStringAfter(a.href, "?"), { newTab: true, active: false })())
 
+// --------------------------
+// site specific functions
+// --------------------------
+
+// goodfon
+// --------------------------
+bactions.goodfon = {}
+bactions.goodfon.openRawImage = async () => {
+  const url = document.querySelector(".wallpaper__download__rbut")
+  if (!url || url === null) {
+    return
+  }
+  // get html of (url) -> get raw image url -> open as raw image
+  const html = (await (await fetch(url.href)).text())
+  const doc = new DOMParser().parseFromString(html, "text/html")
+  const raw = doc.body.querySelector("#im > img").src
+  actions.openLink(raw)()
+}
+
 module.exports = bactions

@@ -903,19 +903,4 @@ actions.nt.setFan = (desiredState) => async () => {
   }
 }
 
-// goodfon
-// --------------------------
-actions.goodfon = {}
-actions.goodfon.openRawImage = async () => {
-  const url = document.querySelector(".wallpaper__download__rbut")
-  if (!url || url === null) {
-    return
-  }
-  // get html of (url) -> get raw image url -> open as raw image
-  const html = (await (await fetch(url.href)).text())
-  const doc = new DOMParser().parseFromString(html, "text/html")
-  const raw = doc.body.querySelector("#im > img").src
-  actions.openLink(raw)()
-}
-
 module.exports = actions
