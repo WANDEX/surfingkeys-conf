@@ -560,7 +560,7 @@ maps["youtube.com"] = [
         await new Promise((r) => setTimeout(r, 300)) // sleep ms
         // click add to watch later
         document.querySelector(".checkbox-height.style-scope.ytd-playlist-add-to-option-renderer").click()
-        await new Promise((r) => setTimeout(r, 200)) // sleep ms
+        await new Promise((r) => setTimeout(r, 300)) // sleep ms
         // close menu box
         document.querySelector("[icon=close]").click()
       }
