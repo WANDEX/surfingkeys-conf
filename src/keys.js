@@ -59,7 +59,19 @@ maps.global = [
     description: "Next found text",
   },
   {
+    alias:       "<Alt-Enter>",
+    map:         "n",
+    category:    categories.visualMode,
+    description: "Next found text",
+  },
+  {
     alias:       "<Alt-e>",
+    map:         "N",
+    category:    categories.visualMode,
+    description: "Previous found text",
+  },
+  {
+    alias:       "<Alt-Backspace>",
     map:         "N",
     category:    categories.visualMode,
     description: "Previous found text",
