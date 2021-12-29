@@ -3,6 +3,7 @@
 // to translate as sentence, to limit DeepL usage
 // or use DeepL by default, but, if only one word(with/without.!?() etc) use pons.
 
+// XXX does not work with surfingkeys 1.0
 Front.registerInlineQuery({
   url: (q) => {
     const s = "en"

@@ -4,7 +4,7 @@
 map("<Ctrl-l>", "<Esc>")
 cmap("<Ctrl-l>", "<Esc>")
 imap("<Ctrl-l>", "<Esc>")
-vmap("<Ctrl-l>", "<Esc>")
+// vmap("<Ctrl-l>", "<Esc>")
 
 // omnibar uses cmap & vmapkey!
 // here we inverse direction because of omnibarPosition=bottom
@@ -14,10 +14,11 @@ cmap("<ArrowUp>", "<Tab>")
 cmap("<Alt-n>", "<Shift-Tab>")
 cmap("<Alt-e>", "<Tab>")
 
+// FIXME: uncomment when vmap in surfingkeys will be added into api return {}
 // visual key remappings
-vmap("n", "j") // forward line
-vmap("e", "k") // backward line
-vmap("i", "l") // forward character
+// vmap("n", "j") // forward line
+// vmap("e", "k") // backward line
+// vmap("i", "l") // forward character
 
 // unmap old visual keys
 vunmap("j")

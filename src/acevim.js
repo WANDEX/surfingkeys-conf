@@ -8,6 +8,11 @@ https://github.com/kalbasit/shabka/commit/bf237a504ff7070b489d86ea352bac412dc84f
 aceVimMap("K", "i") // insert mode and modifier inside
 !!! THIS DOES NOT WORK !!! ACE or Surfingkeys BUG!? */
 
+
+// renamed to addVimKeyMap ?
+
+// this no longer work!
+/*
 addVimMapKey(
   { // left
     keys:       "h",
@@ -75,3 +80,4 @@ addVimMapKey(
     motionArgs: { textObjectInner: true },
   },
 )
+*/

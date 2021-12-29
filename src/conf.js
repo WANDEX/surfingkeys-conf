@@ -1,8 +1,9 @@
-require("./acevim")
-require("./inline")
+require("./api_const") // for surfingkeys 1.0
+// require("./acevim")
+// require("./inline")
 require("./settings")
 require("./theme")
-require("./imap")
+// require("./imap")
 require("./vmap")
 const util = require("./util")
 const keys = require("./keys")
