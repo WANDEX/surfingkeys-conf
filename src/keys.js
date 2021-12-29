@@ -128,13 +128,15 @@ maps.global = [
     alias:       "N",
     category:    categories.scroll,
     description: "Scroll full page down",
-    callback:    () => { Normal.scroll("fullPageDown") },
+    callback:    () => { window.scrollBy(0, 900) },  // temporary hackfix due to 1.0
+    // callback:    () => { Normal.scroll("fullPageDown") },
   },
   {
     alias:       "E",
     category:    categories.scroll,
     description: "Scroll full page up",
-    callback:    () => { Normal.scroll("fullPageUp") },
+    callback:    () => { window.scrollBy(0, -900) },  // temporary hackfix due to 1.0
+    // callback:    () => { Normal.scroll("fullPageUp") },
   },
   {
     alias:       "I",
