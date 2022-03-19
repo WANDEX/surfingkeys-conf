@@ -1237,6 +1237,11 @@ maps["soundcloud.com"] = [
     description: "Shuffle",
     callback:    () => document.querySelector(".shuffleControl").click(),
   },
+  {
+    alias:       "cu",
+    description: "collect urls - get all urls of library collection",
+    callback:    bactions.soundcloud.copyCollectUrls,
+  },
 ]
 
 maps["typingclub.com"] = [

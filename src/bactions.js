@@ -77,5 +77,17 @@ bactions.newgrounds.openRawVideo = () => {
   actions.openLink(cleanurl, { newTab: true, active: true })()
 }
 
+// soundcloud
+bactions.soundcloud = {}
+bactions.soundcloud.copyCollectUrls = () => {
+  // do not forget to scroll to the end of the list -> to get all urls
+  const linkNodes = document.querySelectorAll("[class='badgeList__item'] [class^='sc-link-primary']")
+  const hrefs = []
+  for (let i = 0; i < linkNodes.length; i++) {
+    hrefs.push(linkNodes[i].href)
+  }
+  const urls = hrefs.join("\n") // each on it's own line
+  Clipboard.write(urls)
+},
 
 module.exports = bactions
