@@ -748,6 +748,13 @@ maps["github.com"] = [
     description: "Open clipboard string as file path in repo",
     callback:    actions.gh.openFileFromClipboard,
   },
+  {
+    leader:      "",
+    alias:       "\\Cf",
+    category:    categories.clipboard,
+    description: "Copy to clipboard follow list urls",
+    callback:    bactions.github.copyCollectFollowUrls,
+  },
 ]
 
 maps["gitlab.com"] = [

@@ -51,6 +51,20 @@ bactions.openQueCleanURL = actions.createHints("a[href]", (a) =>
 // site specific functions
 // --------------------------
 
+// github
+bactions.github = {}
+bactions.github.copyCollectFollowUrls = () => {
+  // do not forget to scroll to the end of the list -> to get all urls
+  const lNodes = document.querySelectorAll("span.Link--secondary.pl-1")
+  const hrefs = []
+  for (let i = 0; i < lNodes.length; i++) {
+    base_url = "https://github.com/"
+    hrefs.push(base_url + lNodes[i].outerText)
+  }
+  const urls = hrefs.join("\n") // each on it's own line
+  Clipboard.write(urls)
+},
+
 // goodfon
 // --------------------------
 bactions.goodfon = {}
