@@ -75,8 +75,9 @@ bactions.goodfon.openRawImage = async () => {
   }
   // get html of (url) -> get raw image url -> open as raw image
   const html = (await (await fetch(url.href)).text())
-  const doc = new DOMParser().parseFromString(html, "text/html")
-  const raw = doc.body.querySelector("#im > img").src
+  doc = new DOMParser().parseFromString(html, "text/html")
+  const raw = doc.body.querySelector(".js-download_img > img").src
+  doc = null; delete doc;
   actions.openLink(raw)()
 }
 
